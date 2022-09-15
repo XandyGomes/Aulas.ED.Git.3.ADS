@@ -8,7 +8,24 @@ function selectionSort(vetor){
             if(vetor[posMenor] > vetor[i]) posMenor = i
         }
 
-
-
+        if(vetor[posSel] > vetor[posMenor]){
+            [ vetor[posSel], vetor[posMenor] ] = [ vetor[posMenor], vetor[posSel] ]
+        }
     }
 }
+
+// let nums = [ 99, 0, 22, 33, 99, 55, 88, 0, 66, 11 ]
+
+// console.time()
+// selectionSort(nums)
+// console.timeEnd()
+
+// console.log(nums)
+
+import {nomes} from './data/nomes-desord.mjs'
+
+console.time()
+selectionSort(nomes)
+console.timeEnd()
+
+console.log(nomes)
