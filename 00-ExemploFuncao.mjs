@@ -13,7 +13,7 @@ const imprimirSoma = function(a,b){
 }
 imprimirSoma(5,9)
 
-arrow funtion
+//arrow funtion
 const soma = (a,b) => {
     return a + b
 }
