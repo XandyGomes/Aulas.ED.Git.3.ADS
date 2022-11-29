@@ -1,35 +1,50 @@
 import Deque from './lib/Deque.mjs'
 
-let listaCompra = new Deque()
-// console.log(listaCompra.print())
-// console.log(listaCompra.isEmpty)
+// Lista de compras em que primeiro devem aparecer
+// os itens alimentícios e depois os itens de higiene
+// e limpeza
 
-// Alimentício (início)
-listaCompra.insertFront('Arroz')
-listaCompra.insertFront('Feijão')
-listaCompra.insertFront('Macarrão')
-console.log(listaCompra.print())
+let listaCompras = new Deque()
+console.log(listaCompras.print())
 
-// Higiene/Limpeza (final)
-listaCompra.insertBack('Sabão em pó')
-listaCompra.insertBack('Desodorante')
-listaCompra.insertBack('Água Sanitária')
-console.log(listaCompra.print())
+// Alimentício -> início
+listaCompras.insertFront('Arroz')
+listaCompras.insertFront('Feijão')
+listaCompras.insertFront('Macarrão')
+console.log(listaCompras.print())
 
-listaCompra.insertFront('Café')
-listaCompra.insertFront('Açúcar')
-console.log(listaCompra.print())
+// Higiene/Limpeza -> final
+listaCompras.insertBack('Sabão em pó')
+listaCompras.insertBack('Desodorante')
+listaCompras.insertBack('Água sanitária')
+console.log(listaCompras.print())
 
-listaCompra.insertBack('Amaciante')
-listaCompra.insertBack('Shampoo')
-console.log(listaCompra.print())
+// Alimentício -> início
+listaCompras.insertFront('Café')
+listaCompras.insertFront('Açúcar')
+console.log(listaCompras.print())
 
-listaCompra.insertBack('Enxaguante Bucal')
-console.log(listaCompra.print())
+// Higiene/Limpeza -> final
+listaCompras.insertBack('Amaciante')
+listaCompras.insertBack('Shampoo')
+console.log(listaCompras.print())
 
-let removido = listaCompra.removeBack()
+// Desisti de comprar shampoo
+let removido = listaCompras.removeBack()
 console.log({removido})
-console.log(listaCompra.print())
+console.log(listaCompras.print())
 
-console.log("O primeiro da lista é:", listaCompra.peekFront())
-console.log("O ultimo da lista é:", listaCompra.peekBack())
+// Passei pelo corredor, peguei açúcar e removi da lista
+removido = listaCompras.removeFront()
+console.log({removido})
+console.log(listaCompras.print())
+
+// Consultar qual o próximo item da lista
+let proximo = listaCompras.peekFront()
+console.log({proximo})
+console.log(listaCompras.print())
+
+// Consultar o último item da lista
+let ultimo = listaCompras.peekBack()
+console.log({ultimo})
+console.log(listaCompras.print())

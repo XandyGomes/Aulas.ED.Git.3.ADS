@@ -1,25 +1,21 @@
 import Stack from './lib/Stack.mjs'
 
 let pilha = new Stack()
-
-console.log('A pilha está vazia?', pilha.isEmpty)
 console.log(pilha.print())
+console.log('Está vazia?', pilha.isEmpty)
 
-pilha.push(10)
-pilha.push(20)
-pilha.push(30)
-
-console.log('A pilha está vazia?', pilha.isEmpty)
+pilha.push(35)
+pilha.push(77)
+pilha.push(19)
 console.log(pilha.print())
-
-console.log('o ultimo é o:', pilha.peek())
+console.log('Está vazia?', pilha.isEmpty)
 
 let removido = pilha.pop()
-console.log({removido})
+console.log({removido}, pilha.print())
 
-console.log('o ultimo é o:', pilha.peek())
-removido = pilha.pop()
+let ultimo = pilha.peek()
+console.log({ultimo}, pilha.print())
 
-console.log({removido})
-
-console.log(pilha.print())
+// Tentativa de inserção no início da pilha
+//pilha.unshift(90)
+//console.log(pilha.print())
